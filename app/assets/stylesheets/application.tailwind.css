@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+.bg-with-image {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLXedH_LLzrTDbp9YOZKygng7vLImROksctg&usqp=CAU'); 
+  background-attachment:fixed !important;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+}
+
+@layer components {
+
+  .link-to-style {
+    @apply ml-2 rounded-lg py-3 px-5 border border-blue-600 bg-white inline-block font-medium text-blue-600 hover:underline;
+  }
+  .task-title {
+    @apply block font-medium mb-1 text-blue-600
+  }
+  .tasks-container {
+    @apply rounded-lg border-1 border-blue-600  bg-slate-400/75 
+  }
+  .button-style {
+    @apply rounded-lg py-3 px-5 inline-block font-medium text-white bg-blue-600 hover:bg-blue-300
+  }
+}
+
+

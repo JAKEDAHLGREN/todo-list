@@ -1,0 +1,8 @@
+<div class="mx-auto md:w-2/3 w-full">
+  <h1 class="font-bold text-center text-4xl text-blue-600">Editing task</h1>
+
+  <%= render "form", task: @task %>
+
+  <%= link_to "Show this task", @task, class:current_page?(task_path(@task)) ? "button-style" : "link-to-style" %>
+  <%= link_to "Back to tasks", tasks_path, class: current_page?(task_path(@task)) ? "button-style" : "link-to-style" %>
+</div>

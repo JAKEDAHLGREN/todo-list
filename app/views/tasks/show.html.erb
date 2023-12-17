@@ -1,0 +1,16 @@
+<div class="mx-auto md:w-2/3 w-full flex">
+  <div class="mx-auto">
+    <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <% end %>
+    <h1 class="font-bold text-center text-4xl text-blue-600">Task details</h1>
+
+    <%= render @task %>
+
+    <%= link_to "Edit task", edit_task_path(@task), class: "link-to-style" %>
+    <div class="inline-block ml-2">
+      <%= button_to "Delete task", task_path(@task), method: :delete, class: "link-to-style" %>
+    </div>
+    <%= link_to "Back to tasks", tasks_path, class: "link-to-style" %>
+  </div>
+</div>
