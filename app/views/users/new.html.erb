@@ -1,0 +1,40 @@
+<% title 'Sign Up', false %>
+<div>
+  <h1 class="font-bold text-4xl">Sign Up</h1>
+</div>
+
+<%= form_with(model: @user) do |form| %>
+<div class="my-5">
+  <%= form.label :name %>
+  <%= form.text_field :name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  <% if @user.errors.has_key?(:name) %>
+    <p class="text-red-500 mt-1"><%= @user.errors[:name].join(', ') %></p>
+  <% end %>
+</div>
+  <div class="my-5">
+    <%= form.label :email %>
+    <%= form.text_field :email, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <% if @user.errors.has_key?(:email) %>
+      <p class="text-red-500 mt-1"><%= @user.errors[:email].join(', ') %></p>
+    <% end %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :password %>
+    <%= form.password_field :password, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <% if @user.errors.has_key?(:password) %>
+      <p class="text-red-500 mt-1"><%= @user.errors[:password].join(', ') %></p>
+    <% end %>
+  </div>
+  <div class="my-5">
+    <%= form.label :Confirm_Password %>
+    <%= form.password_field :password_confirmation, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <% if @user.errors.has_key?(:password_confirmation) %>
+      <p class="text-red-500 mt-1"><%= @user.errors[:password_confirmation].join(', ') %></p>
+    <% end %>
+  </div>
+
+  <div class="inline mt-3">
+    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+  </div>
+<% end %>

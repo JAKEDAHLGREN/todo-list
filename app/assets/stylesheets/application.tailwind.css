@@ -21,7 +21,7 @@
     @apply block font-medium mb-1 text-blue-600
   }
   .tasks-container {
-    @apply rounded-lg border-1 border-blue-600  bg-slate-400/75 
+    @apply rounded-lg max-w-[50%] border-1 border-blue-600 bg-slate-400
   }
   .button-style {
     @apply rounded-lg py-3 px-5 inline-block font-medium text-white bg-blue-600 hover:bg-blue-300
